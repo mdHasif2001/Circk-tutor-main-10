@@ -58,7 +58,7 @@ const Register = () => {
                 <div className='d-flex'>
                     <input className='checkbox' onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
 
-                    <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Condition</label>
+                    <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Crick Tutor Terms and Condition</label>
 
                 </div>
 

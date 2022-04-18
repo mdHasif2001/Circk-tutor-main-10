@@ -79,7 +79,7 @@ const Login = () => {
             </Form>
             {errorElement}
 
-            <p>New to Genius Car? <Link to='/register' className='custom-reg-tex' onClick={navigateRegister}>Please Register</Link></p>
+            <p>New to Crick Tutor? <Link to='/register' className='custom-reg-tex' onClick={navigateRegister}>Please Register</Link></p>
 
             <p>Forget Password? <button to='/register' className='btn btn-custom text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
 
