@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Become a class Batsman",
+        "price": "500",
+        "description": "Our Academy Provide the best services. I will teach you the best way to becoming a pure class batsman",
+        "img": "https://i.ibb.co/NVxsNVm/pexels-yogendra-singh-4770720-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Become a perfect Allrounder",
+        "price": "800",
+        "description": "You are in the right place to becoming a very good allrounder I mean the perfect allrounder",
+        "img": "https://i.ibb.co/vcF1nfF/pexels-js-shariff-7680896-1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Become a handy Bowler",
+        "price": "350",
+        "description": "Bowlers always play a very important part. I will teach you to becoming a good handy bowler",
+        "img": "https://i.ibb.co/jLTkhww/cricket-724614-1280.jpg"
+    }
+]
