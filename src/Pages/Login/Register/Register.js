@@ -65,7 +65,7 @@ const Register = () => {
 
                 <input 
                 disabled={!agree}
-                className='w-50 mx-auto btn btn-primary mt-2' 
+                className='w-50 mx-auto btn btn-custom mt-2' 
 
                 type="submit" 
 
@@ -74,7 +74,7 @@ const Register = () => {
                 />
             </form>
 
-            <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+            <p>Already have an account? <Link to='/login' className='custom-reg-tex' onClick={navigateLogin}>Please Login</Link></p>
             <SocialLogin></SocialLogin>
         </div>
     );

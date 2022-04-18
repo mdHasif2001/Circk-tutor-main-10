@@ -6,7 +6,7 @@ import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
-
+import './Login.css'
 
 const Login = () => {
     const emailRef = useRef('');
@@ -64,7 +64,7 @@ const Login = () => {
 
     return (
         <div className='container w-50 mx-auto'>
-            <h2 className='text-primary text-center mt-2'>Please Login</h2>
+            <h2 className='text-dark text-center mt-2'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -79,7 +79,7 @@ const Login = () => {
             </Form>
             {errorElement}
 
-            <p>New to Genius Car? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <p>New to Genius Car? <Link to='/register' className='custom-reg-tex' onClick={navigateRegister}>Please Register</Link></p>
 
             <p>Forget Password? <button to='/register' className='btn btn-custom text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
 
