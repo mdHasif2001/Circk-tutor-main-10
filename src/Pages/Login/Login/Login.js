@@ -22,26 +22,26 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
-      const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-      if(loading || sending){
+    if (loading || sending) {
         return <Loading></Loading>
     }
 
 
-    if(user){
+    if (user) {
         navigate(from, { replace: true });
     }
 
     if (error) {
-       
-        errorElement = 
-               <p className='text-danger'>Error: {error?.message} </p>
-            
-         }
-   
+
+        errorElement =
+            <p className='text-danger'>Error: {error?.message} </p>
+
+    }
+
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -55,15 +55,11 @@ const Login = () => {
         navigate('/register');
     }
 
-    const resetPassword = async() => {
+    const resetPassword = async () => {
         const email = emailRef.current.value;
-        // if(email){
-        //     await sendPasswordResetEmail(email);
-        //     toast('Sent email');
-        // }
-        // else{
-        //     toast('please enter your email address')
-        // }
+        if(email){
+            await sendPasswordResetEmail(email);
+        }
     }
 
     return (
@@ -71,13 +67,13 @@ const Login = () => {
             <h2 className='text-primary text-center mt-2'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required/>
+                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
+                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Button variant="primary  w-50 mx-auto d-block mb-2" type="submit">
+                <Button variant="w-50 mx-auto d-block mb-2 btn btn-custom" type="submit">
                     Login
                 </Button>
             </Form>
@@ -85,10 +81,9 @@ const Login = () => {
 
             <p>New to Genius Car? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
 
-            <p>Forget Password? <button to='/register' className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
+            <p>Forget Password? <button to='/register' className='btn btn-custom text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
 
             <SocialLogin></SocialLogin>
-            {/* <ToastContainer /> */}
         </div>
     );
 };
