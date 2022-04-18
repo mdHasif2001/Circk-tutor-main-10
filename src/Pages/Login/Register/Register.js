@@ -13,9 +13,8 @@ const Register = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-        error,
-      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
-      const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating] = useUpdateProfile(auth);
 
 
     const navigate = useNavigate();
@@ -24,12 +23,12 @@ const Register = () => {
         navigate('/login')
     }
 
-    if(loading || updating){
+    if (loading || updating) {
         return <Loading></Loading>
     }
 
 
-    if(user){
+    if (user) {
         console.log('user', user);
     }
 
@@ -39,38 +38,36 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        // const agree = event.target.terms.checked;
-
-         await  createUserWithEmailAndPassword(email, password);
-         await updateProfile({ displayName: name });
-         console.log('Updated profile');
-         navigate('/home');
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        console.log('Updated profile');
+        navigate('/home');
 
     }
 
     return (
         <div className='register-form'>
-            <h2 style={{textAlign: 'center'}}>Please Register</h2>
+            <h2 style={{ textAlign: 'center' }}>Please Register</h2>
             <form onSubmit={handleRegister}>
                 <input type="text" name="name" placeholder='Your Name' />
-               
-                <input type="email" name="email" id="" placeholder='Email Address' required/>
-                
-                <input type="password" name='password' placeholder='Password' id="" required/>
+
+                <input type="email" name="email" id="" placeholder='Email Address' required />
+
+                <input type="password" name='password' placeholder='Password' id="" required />
 
 
-                <input onClick={() => setAgree(!agree)}  type="checkbox" name="terms" id="terms" />
+                <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
 
-                <label className={`ps-2 ${agree ? '' : 'text-danger'}`}  htmlFor="terms">Accept Genius Car Terms and Condition</label>
+                <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Condition</label>
 
-                <input 
-                disabled={!agree}
-                className='w-50 mx-auto btn btn-custom mt-2' 
+                <input
+                    disabled={!agree}
+                    className='w-50 mx-auto btn btn-custom mt-2'
 
-                type="submit" 
+                    type="submit"
 
-                value='Register' 
-                
+                    value='Register'
+
                 />
             </form>
 

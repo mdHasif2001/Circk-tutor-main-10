@@ -9,18 +9,18 @@ const ServiceDetail = () => {
 
 
             <div id="services" className='container'>
-                <h1 className='text-dark text-center m-5'>Services</h1>
+                <h1 className='text-dark text-center m-5'>Fill In the Requirement</h1>
             </div>
 
             <div className='container'>
             <form className="row g-3">
                 <div className="col-md-4">
                     <label for="validationDefault01" className="form-label">First name</label>
-                    <input type="text" className="form-control" id="validationDefault01" value="your first name" required />
+                    <input type="text" className="form-control" id="validationDefault01" required />
                 </div>
                 <div className="col-md-4">
                     <label for="validationDefault02" className="form-label">Last name</label>
-                    <input type="text" className="form-control" id="validationDefault02" value="your last name" required />
+                    <input type="text" className="form-control" id="validationDefault02" required />
                 </div>
                 <div className="col-md-4">
                     <label for="validationDefaultUsername" className="form-label">Username</label>
@@ -37,7 +37,14 @@ const ServiceDetail = () => {
                     <label for="validationDefault04" className="form-label">State</label>
                     <select className="form-select" id="validationDefault04" required>
                         <option selected disabled value="">Choose...</option>
-                        <option>...</option>
+                        <option>Dhaka</option>
+                        <option>Chittagong</option>
+                        <option>Rajshahi</option>
+                        <option>Khulna</option>
+                        <option>Barisal</option>
+                        <option>Rangpur</option>
+                        <option>Shylhet</option>
+                        <option>mymensingh</option>
                     </select>
                 </div>
                 <div className="col-md-3">

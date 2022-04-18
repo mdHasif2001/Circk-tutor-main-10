@@ -57,7 +57,7 @@ const Login = () => {
 
     const resetPassword = async () => {
         const email = emailRef.current.value;
-        if(email){
+        if (email) {
             await sendPasswordResetEmail(email);
         }
     }

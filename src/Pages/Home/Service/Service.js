@@ -1,9 +1,9 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './Service.css'
 
-const Service = ({service}) => {
-    const {id, name, img, description, price} = service;
+const Service = ({ service }) => {
+    const { id, name, img, description, price } = service;
     const navigate = useNavigate();
 
     const navigateToServiceDetail = id => {
