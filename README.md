@@ -1,3 +1,36 @@
+### Crick Tutor
+
+### live-site-link: https://crick-tutor.web.app/
+
+
+# Five Bullet Points
+
+---> This website is made with React js
+
+---> It is a fully functional website
+
+---> It has the authentication system
+
+---> It also has a private route
+
+---> You will gonna feel smoothness by visiting this website
+
+
+# Technologies used in this project
+
+1. React js
+
+2. Bootstrap
+
+3. React router
+
+4. Firebase
+
+5. Firebase hooks
+
+6. React toast installed (but not used)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
